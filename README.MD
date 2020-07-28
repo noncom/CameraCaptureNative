@@ -1,4 +1,4 @@
-### Camera Capture Native for Unity Android
+# Camera Capture Native for Unity Android
 
 This is an Android-native plugin for Unity to access the device cameras.
 Unity has a far more comfortable way of doing this with `WebCamTexture`
@@ -7,7 +7,7 @@ be a need to access that process on a lower level either with the Android
 API or the native C++ code, for various reasons. This project provides
 these two points of access.
 
-### Inspiration
+# Inspiration
 
 This project is heavily based on https://github.com/robsondepaula/unity-android-native-camera
 
@@ -17,16 +17,16 @@ has implications when building, refer to the **Building the Project** section fo
 - Native C++ part is moved to *CMake 3.10.2* from *ndk-build*
 - The Java part of the project is rewritten to Kotlin. This again has build implications.
 
-### Making it work
+# Making it work
 
 Two main things are required to make it work: building the project itself and interfacing it
 with Unity.
 
-#### Building the Project (important!)
+## Building the Project (important!)
 
 Simply run the build from Android Studio and collect the *aar* artifact in the output.
 
-###### Notice on Kotlin
+### Notice on Kotlin
 
 Since the project relies on Kotlin, it introduces the additional dependency of kotlin stdlib that's necessary to make it work. To include it into the Unity project:
 
@@ -36,7 +36,7 @@ Since the project relies on Kotlin, it introduces the additional dependency of k
 
 This additional *jar* is always required in your Unity project to make Kotlin work.
 
-###### Notice on native libraries
+### Notice on native libraries
 
 By default the native libraries are compiled into the *aar* as well, so you don't have
 to separately put anything else into the Unity project except the *aar* itself. Put the
@@ -57,7 +57,7 @@ be significantly less in size. Copy it to `Assets/Plugins/Android` just like bef
 **Important:** if you change the Java/Kotlin packaging of this library, remember to change
 the corresponding function names in `RenderingPlugin.cpp`.
 
-#### The Unity Part
+## The Unity Part
 
 The additional setup is required on Unity part:
 

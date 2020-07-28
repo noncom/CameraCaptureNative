@@ -15,7 +15,9 @@ Key differences include:
 - The Android API and Android Native parts are joined into one single project now. This
 has implications when building, refer to the **Building the Project** section for more info.
 - Native C++ part is moved to *CMake 3.10.2* from *ndk-build*
-- The Java part of the project is rewritten to Kotlin. This again has build implications.
+- The Java part of the project is rewritten in Kotlin. This again has build implications.
+- There is no release/debug choice in gradle.build now, please refer to the original project
+if you want that.
 
 # Making it work
 

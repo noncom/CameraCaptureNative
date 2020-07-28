@@ -18,9 +18,6 @@ public class CameraPluginWrapper : MonoBehaviour {
     
     IEnumerator Start () {
         if (Application.platform == RuntimePlatform.Android) {
-            //using (AndroidJavaClass javaClass = new AndroidJavaClass ("arp.camera.CameraPluginActivity")) {
-            //    _androidJavaPlugin = javaClass.GetStatic<AndroidJavaObject> ("_context");
-            //}
             using (AndroidJavaClass javaClass = new AndroidJavaClass ("com.example.cameracapturenative.CameraPluginActivity")) {
                 _androidJavaPlugin = javaClass.GetStatic<AndroidJavaObject> ("INSTANCE");
             }
